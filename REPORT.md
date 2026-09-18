@@ -3,9 +3,9 @@
 ## Bank Account Simulator
 
 ### Team Members
-- [Robert Calinescu]
-- [Ethan Behl]
-- [Jeremiah Onunkwo]
+- Robert Calinescu
+- Ethan Behl
+- Jeremiah Onunkwo
 
 ## 2.    Design Problem
 ### 2.1 Problem Definition:  Bank Account Simulator
