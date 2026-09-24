@@ -29,3 +29,33 @@ The Bank Account Simulator will provide the following functions:
 - Update account balances after successful transactions.
 - Record completed transactions for later viewing.
 - Display appropriate confirmation or error messages based on the result of a transaction.
+
+### 2.2.3 Constraints
+
+The Bank Account Simulator will operate under the following design constraints:
+
+1. **Reliability:** The system shall prevent a withdrawal or transfer from
+   being completed when the requested amount exceeds the available balance.
+
+2. **Data Integrity:** A rejected transaction shall not modify the balance
+   of any affected account.
+
+3. **Security and Access:** Only an authenticated user shall be permitted
+   to perform transactions on an account associated with that user.
+
+4. **Economic:** The application shall be developed using freely available
+   development and testing tools and shall not require paid third-party
+   services to operate.
+
+5. **Sustainability:** The application shall operate entirely as a software
+   simulation and shall not require dedicated physical banking hardware.
+
+6. **Ethics:** The application shall use simulated account and transaction
+   data and shall not require users to provide real banking credentials or
+   real financial account information.
+
+7. **MVC Architecture:** The application shall follow the Model-View-Controller
+   (MVC) architecture as required by the project specification.
+
+8. **Testing:** Automated unit tests shall be implemented using JUnit where
+   applicable.
