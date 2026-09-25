@@ -30,6 +30,17 @@ The Bank Account Simulator will provide the following functions:
 - Record completed transactions for later viewing.
 - Display appropriate confirmation or error messages based on the result of a transaction.
 
+### 2.2.2 Objectives
+The objective of the Bank Account Simulator is to have the majority of the features expected in a regular banking app, scaled down to an appropriate scope for the class and testing goals. The objectives are:
+- To provide users with a personal bank account simulation. 
+- To provide users with transactional capabilities with their simulated bank account, including but not limited to deposits, withdrawals, and transfers.
+- To validate the above transactions before confirmation.
+- To provide sub-accounts that the user can create within their overall simulated account.
+- To provide a transaction history for users to review and confirm transactions.
+- To provide account sign-in and value validation through the implementation of MVC architecture.
+- To provide transaction capabilities between multiple user-created accounts.
+- To orient the simulator in a way to demonstrate various testing methods as needed.
+
 ### 2.2.3 Constraints
 
 The Bank Account Simulator will operate under the following design constraints:
