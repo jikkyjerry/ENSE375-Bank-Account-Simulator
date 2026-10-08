@@ -51,7 +51,7 @@ The Bank Account Simulator will operate under the following design constraints:
 2. **Data Integrity:** A rejected transaction shall not modify the balance
    of any affected account.
 
-3. **Security and Access:** Only an authenticated user shall be permitted
+3. **Security and Access:** Only a registered user shall be permitted
    to perform transactions on an account associated with that user.
 
 4. **Economic:** The application shall be developed using freely available
