@@ -30,7 +30,7 @@ The Bank Account Simulator will provide the following functions:
 - Record completed transactions for later viewing.
 - Display appropriate confirmation or error messages based on the result of a transaction.
 
-### 2.2.2 Objectives
+#### 2.2.2 Objectives
 The objective of the Bank Account Simulator is to have the majority of the features expected in a regular banking app, scaled down to an appropriate scope for the class and testing goals. The objectives are:
 - To provide users with a personal bank account simulation. 
 - To provide users with transactional capabilities with their simulated bank account, including but not limited to deposits, withdrawals, and transfers.
@@ -69,3 +69,30 @@ The Bank Account Simulator will operate under the following design constraints:
 
 8. **Testing:** Automated unit tests shall be implemented using JUnit where
    applicable.
+
+##3. Solution 
+Two possible designs were considered for the Bank Account Simulator so far. Both designs use the required Model View Controller architecture but they differ in how application responsibilities are separated. The designs were evaluated according to testability, separation of concerns, reliability and maintainability, and ability to support the required testing techniques. These techniques include path testing, data-flow testing, integration testing, boundary-value analysis, equivalence-class testing, decision-table testing, state-transition testing, and use-case testing. 
+###3.1 Solution 1: Basic MVC Design
+####Design Description
+The first solution uses a basic MVC architecture. 
+The View provides a simple interface through which the user can:
+- log in
+- create or select accounts
+- view account balances
+- deposit/withdraw/transfer funds
+- view transaction history.
+
+The Controller receives user requests from the View and contains the majority of the application’s processing and validation logic. The responsibilities include:
+- validates transaction values
+- verifies available balances
+- processes deposits, withdrawals, and transfers
+- performs login validation
+- determines whether an operation should be accepted or rejected.
+- Coordinating account updates and transaction history
+The Model stores application data including: users, accounts, balances, sub-accounts, and transaction history. Successful operations performed through the Controller update the corresponding Model data. 
+
+####Testing Advantages
+Solution 1 provides useful opportunities for testing. Because the application follows MVC, Model and Controller logic can be tested separately of the user interface. Deposit, withdrawal, and transfer amounts provide good inputs for boundary-value analysis and equivalence-class testing. Transaction processing also contains conditional branches that make it possible to perform path testing and decision table testing. 
+
+####Weaknesses: 
+The main weakness of Solution 1 is that too much responsibility is concentrated in the Controller. The Controller is responsible for authentication, transaction validation, transaction processing, balance checking, account management, and transaction history management. This makes unit testing less isolated because everything is mixed together. Validation rules are also harder to test independently because they are not separated into their own component. Integration testing becomes less clearly divided because many application responsibilities depend on the same Controller. Another limitation is that although transaction history is stored, transactions are not represented as strongly separated objects or states. It becomes more difficult to examine and test the lifecycle of a transaction. State transition testing is also limited as this design doesn’t have enough account states to test. 
