@@ -97,3 +97,48 @@ Solution 1 provides useful opportunities for testing. Because the application fo
 
 #### 3.1.3 Weaknesses: 
 The main weakness of Solution 1 is that too much responsibility is concentrated in the Controller. The Controller is responsible for authentication, transaction validation, transaction processing, balance checking, account management, and transaction history management. This makes unit testing less isolated because everything is mixed together. Validation rules are also harder to test independently because they are not separated into their own component. Integration testing becomes less clearly divided because many application responsibilities depend on the same Controller. Another limitation is that although transaction history is stored, transactions are not represented as strongly separated objects or states. It becomes more difficult to examine and test the lifecycle of a transaction. State transition testing is also limited as this design doesn’t have enough account states to test. 
+
+
+### 3.2 Solution 2: Improved MVC Design
+
+#### 3.2.1 Design Description
+
+Solution 2 improves the first design by separating transaction processing, validation, authentication, and account management into smaller, more focused functions and classes. This makes the Bank Account Simulator easier to maintain, test, and debug.
+
+Instead of having one Controller handle most of the application logic, the Controller coordinates requests between the View and specialized Model components. These components handle user registration and login, account and sub-account management, deposits, withdrawals, transfers, and transaction history.
+
+Additionally, the design introduces clearer account states, such as Active and Deactivated, to support state-transition testing. This modular approach improves the separation of responsibilities while maintaining the MVC architecture.
+
+#### 3.2.2 Testing Advantages
+
+Solution 2 offers the following testing advantages:
+
+1. **Unit Testing:** Smaller, independent functions make it easier to test individual operations such as deposits, withdrawals, transfers, and authentication.
+
+2. **Boundary-Value and Equivalence-Class Testing:** Transaction amounts, account balances, and password requirements provide clear valid and invalid test cases.
+
+3. **Decision-Table Testing:** Different combinations of conditions, such as available balance, transaction amount, and account status, can be tested systematically.
+
+4. **State-Transition Testing:** Clearly defined account states allow testing of valid and invalid operations under different account conditions.
+
+5. **Integration Testing:** Separate components allow the team to verify how the Controller, account management, and transaction processing work together.
+
+6. **Path and Data-Flow Testing:** Smaller functions make it easier to examine execution paths and track how transaction data moves through the application.
+
+Overall, the modular design makes defects easier to identify and allows more focused and organized testing.
+
+#### 3.2.3 Weaknesses
+
+Despite these improvements, Solution 2 still has some limitations:
+
+1. **Increased Complexity:** More components and classes require additional planning and development effort.
+
+2. **Integration Challenges:** Separate components must communicate correctly, requiring additional integration testing.
+
+3. **Development Time:** Implementing and testing multiple components may take longer than the simpler design.
+
+4. **State Management:** Additional account states require clearly defined rules to prevent inconsistent behaviour.
+
+5. **Transaction Consistency:** Transfers must update both affected accounts correctly to prevent inaccurate balances if an operation fails.
+
+Although Solution 2 improves testability and maintainability, further refinement and testing will be necessary before selecting and implementing the final solution.
