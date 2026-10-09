@@ -89,6 +89,7 @@ The Controller receives user requests from the View and contains the majority of
 - performs login validation
 - determines whether an operation should be accepted or rejected.
 - Coordinating account updates and transaction history
+
 The Model stores application data including: users, accounts, balances, sub-accounts, and transaction history. Successful operations performed through the Controller update the corresponding Model data. 
 
 #### 3.1.2 Testing Advantages
