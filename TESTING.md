@@ -37,7 +37,7 @@ JUnit 5
 - test cases
 - results
 
-## 7. Use Case Testing
+## 7. Use Case Testing - Jeremiah
 - use cases
 - derived cases
 - results
@@ -57,7 +57,7 @@ JUnit 5
 - coverage
 - results
 
-## 10. Integration Testing
+## 10. Integration Testing - Jeremiah
 - selected units
 - integration cases
 - results
