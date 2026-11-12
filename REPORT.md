@@ -143,5 +143,20 @@ Despite these improvements, Solution 2 still has some limitations:
 
 Although Solution 2 improves testability and maintainability, further refinement and testing will be necessary before selecting and implementing the final solution.
 
+### 3.3 Final Solution - All of Us
+#### 3.3.2 Environmental, Societal, Safety and Economic Consideration - Ethan
+#### 3.3.3 Test Cases - Ethan
+#### 3.3.4 Limitation - Robert
+### 4 Team Work - Jeremiah
+#### 4.1 Meeting 1
+#### 4.2 Meeting 2
+#### 4.3 Meeting 3
+   - Deadline of Nov 11 - 27 = coding and completion of our individual branches 
+   - next meeting - November 27 Friday 
+   - by december 2 - section 3.3 done, Testing.md
+   - by december 7 but hopefully earlier - video presentation, Report.md
+### 5 Gantt Chart - All of Us
+### 6 Conclusion - Jeremiah
+### References
+### Appendix
 #### Run instructions - Jeremiah
-#### 4. Team Work - Jeremiah
