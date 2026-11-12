@@ -142,3 +142,6 @@ Despite these improvements, Solution 2 still has some limitations:
 5. **Transaction Consistency:** Transfers must update both affected accounts correctly to prevent inaccurate balances if an operation fails.
 
 Although Solution 2 improves testability and maintainability, further refinement and testing will be necessary before selecting and implementing the final solution.
+
+#### Run instructions - Jeremiah
+#### 4. Team Work - Jeremiah
