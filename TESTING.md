@@ -10,27 +10,34 @@ JUnit 5
 - TDD process
 - test naming convention - Osherove test naming convention [UnitOfWork_State_UnderTest_ExpectedBehavior]
 
-## 3. Boundary Value Analysis
+## 3. Boundary Value Analysis - Robert
 - function
 - boundaries
 - test requirements
 - test cases
 - results
 
-## 4. Equivalence Class Testing
+## 4. Equivalence Class Testing - Robert
 - partitions/classes
 - representatives
 - expected outputs
 - results
 
-## 5. Decision Table Testing
+## 5. Decision Table Testing - Ethan
+- transferring funds example
 - conditions
+    - amount > 0
+    - source != destination
+    - source has enough balance to send the money
 - actions
+    - transfer processing
+    - reject amount
+    - reject because of insufficient funds
 - decision table
 - derived tests
 - results
 
-## 6. State Transition Testing
+## 6. State Transition Testing - Ethan
 - diagram
 - transitions
 - test requirements
@@ -42,7 +49,7 @@ JUnit 5
 - derived cases
 - results
 
-## 8. Path Testing
+## 8. Path Testing - Robert
 - chosen method
 - source/CFG
 - coverage criterion
@@ -50,7 +57,7 @@ JUnit 5
 - JUnit mapping
 - results
 
-## 9. Data Flow Testing
+## 9. Data Flow Testing - Robert
 - same chosen function
 - defs/uses
 - DU pairs / DU paths
@@ -62,11 +69,7 @@ JUnit 5
 - integration cases
 - results
 
-## 11. Acceptance / End-to-End Testing
-- happy paths
-- unhappy paths
-
-## 12. Test Summary
+## 12. Test Summary - Ethan
 Total tests
 Passed
 Failed
