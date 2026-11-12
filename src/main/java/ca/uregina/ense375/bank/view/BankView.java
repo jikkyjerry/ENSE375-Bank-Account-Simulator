@@ -1,5 +1,5 @@
-===========================
-   BANK ACCOUNT SIMULATOR
+//===========================
+/*    BANK ACCOUNT SIMULATOR
 ============================
 
 1. Login
@@ -10,5 +10,5 @@
 6. Transfer
 7. Transaction History
 8. Logout
-
+*/
 //jeremiah
