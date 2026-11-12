@@ -1,2 +1,21 @@
 # Maven build output
-**/target/
+target/
+
+# Java compiled files
+*.class
+
+# IDE settings
+.idea/
+*.iml
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
